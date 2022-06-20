@@ -1,0 +1,54 @@
+{
+  "name": "car-racing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build && npm run run",
+    "prebuild": "rm -rf dist/",
+    "build": "tsc",
+    "run": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "tsc-watch --onSuccess \"npm run run\"",
+    "test": "mocha test/**/*.spec.ts --exit",
+    "test:watch": "mocha --watch test/**/*.spec.ts --exit",
+    "test:coverage": "nyc mocha --require ts-node/register --require source-map-support/register test/**/*.spec.ts --exit",
+    "lint": "npx eslint --fix src/**/*.ts test/**/*.ts",
+    "lint:dry": "npx eslint --fix-dry-run src/**/*.ts test/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksyoo21remo/car-racing.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksyoo21remo/car-racing/issues"
+  },
+  "homepage": "https://github.com/ksyoo21remo/car-racing#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.0.0",
+    "@types/sinon": "^10.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1",
+    "sinon": "^14.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.8.1",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.7.4"
+  }
+}

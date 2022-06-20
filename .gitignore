@@ -1,0 +1,12 @@
+# Node JS Package directory
+node_modules/
+
+# typescript compile result
+dist/
+
+# test coverage report
+.nyc_output/
+coverage/
+
+# JetBrains IDE
+.idea/
